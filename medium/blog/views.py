@@ -3,7 +3,7 @@ from django.views.generic import (TemplateView, CreateView, UpdateView,
                                    DeleteView, ListView, DetailView)
 from django.urls import reverse_lazy
 from .models import Comment, Post
-from .form import  CommentForm, PostForm
+from .forms import  CommentForm, PostForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils import  timezone
 from django.contrib.auth.decorators import login_required
@@ -22,27 +22,27 @@ class PostListView(ListView):
         return Post.objects,filter(published_date__lte = timezone.now()).order_by('-published_date')
 
 class PostDetailView(DetailView):
-    model = post
+    model = Post
     template_name = 'blog/post_detail.html'
 
 
 class CreatePostView(LoginRequiredMixin, CreateView):
-    login_url = /login/
+    login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
 
     model = Post
     form_class = PostForm
 
 class PostUpdateView(LoginRequiredMixin, UpdateView):
-    login_url = /login/
+    login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
 
     model = Post
     form_class = PostForm
 
 class PostDeleteView(LoginRequiredMixin, DeleteView):
-    login_url = /login/
-    # not sure of adding this field.Experimentation
+    login_url = '/login/'
+    #NOTE not sure of adding this field.Experimentation
     redirect_field_name = 'blog/post_list.html'
 
     model = Post
