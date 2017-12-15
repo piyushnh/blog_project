@@ -54,7 +54,7 @@ class DraftListView(LoginRequiredMixin,ListView):
     redirect_field_name = 'blog/post_list.html'
 
     model = Post
-
+    template_name = 'blog/post_draft_list.html'
     def get_queryset(self):
         return Post.objects.filter(published_date__isnull=True).order_by('-created_date')
 
@@ -64,7 +64,7 @@ def post_publish(request,pk ):
     post.publish()
     # NOTE THAT I HAVE USED POST.PK HERE
     return redirect('post_detail', pk = post.pk)
-    
+
 ###########################################################################
 # COMMENT MECHANISM STARTS HERE
 ###########################################################################
