@@ -46,7 +46,7 @@
 
 /* NOTE THIS IS FOR ABOUT,HTML */
 svg {
-  height: 100vmin;
+  height: 40em;
   left: calc(50% - 50vmin);
   position: relative;
   width: 100vmin;

@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{% url 'blog:post_list' %}">
+          <a class="navbar-brand" href="{% url 'blog:about' %}">
             <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Medium</a>
         </div>
 
@@ -42,7 +42,7 @@
             <li><a href="{% url 'blog:drafts_list' %}">Drafts List</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
             {% else %}
-            <li class="nav navbar-nav navbar-right"><a href="{% url 'login' %}">Login<span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li> 
+            <li class="nav navbar-nav navbar-right"><a href="{% url 'login' %}">Login<span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
             {% endif %}
 
           </ul>
