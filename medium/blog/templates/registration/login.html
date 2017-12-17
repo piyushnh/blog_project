@@ -1,8 +1,8 @@
 {% extends "blog/base.html" %}
 
 {% block body_block %}
-   <div class="jumbotron">
-     <h2>Please login!</h2>
+   <div class="jumbotron" id="login-page">
+     <h2 id="login-page">Please login!</h2>
      <h3>Must be superuser</h3>
      {% if form.error %}
         <h6>Invalid credentials!</h6>
@@ -12,7 +12,7 @@
        {% csrf_token %}
        {{form.as_p}}
 
-       <input type="submit"  value="Login">
+       <input type="submit" class='btn btn-success' value="Login">
        <!-- NOTE NO IDEA WHAT THIS IS -->
        <input type="hidden" name="next" value="{{next}}">
 
