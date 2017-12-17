@@ -1,0 +1,11 @@
+.techfont{
+ font-family: 'Russo one',sans-serif;
+ font-size: 1.5em;
+ text-decoration: underline;
+}
+
+#login-page{
+ background: #d7f7e1;
+}
+
+/* NOTE:THIS IS FOR COLORCHANGING */
