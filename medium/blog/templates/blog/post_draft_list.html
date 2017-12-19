@@ -1,9 +1,9 @@
 {% extends "blog/base.html" %}
 
 {% block body_block %}
-  {% for post in posts %}
-    <h2><a href="{% url 'blog:post_detail' pk=post.pk%}">{{post.title}}</a></h2>
-    <p>{{post.text|truncatechars:50}}</p>
+  {% for post in post_list %}
+    <h2><a href="{% url 'blog:post_detail' pk=post.pk%}" class="loader">{{post.title}}</a></h2>
+    <p>{{post.text|safe|truncatechars:50}}</p>
   {% endfor %}
 
 {% endblock %}

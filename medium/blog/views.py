@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, HttpResponse
 from django.views.generic import (TemplateView, CreateView, UpdateView,
                                    DeleteView, ListView, DetailView)
 from django.urls import reverse_lazy
@@ -42,20 +42,23 @@ class PostUpdateView(LoginRequiredMixin, UpdateView):
     model = Post
     form_class = PostForm
 
-class PostDeleteView(LoginRequiredMixin, DeleteView):
-
+class PostDeleteView( DeleteView):
+    # login_url = '/login/'
+    # redirect_field_name = 'blog/post_detail.html'
+    # context_object_name = "post"
     model = Post
-    success_url = reverse_lazy('post_list')
+    # template_name = "blog/post.html"
+    success_url = reverse_lazy('blog:post_list')
 
 
-class DraftListView(LoginRequiredMixin,ListView):
+class DraftListView( LoginRequiredMixin,ListView):
     login_url = '/login/'
     redirect_field_name = 'blog/post_list.html'
-
+    print('Piyush is amazing')
     model = Post
     template_name = 'blog/post_draft_list.html'
     def get_queryset(self):
-        return Post.objects.filter(published_date__isnull=True).order_by('created_date')
+        return Post.objects.filter(published_date__lte = timezone.now()).order_by('created_date')
 
 @login_required
 def post_publish(request,pk ):

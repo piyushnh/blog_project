@@ -19,7 +19,7 @@
        <br>
        <hr>
        <br>
-       <a href="{% url 'blog:add_comment_to_post' pk=my_post.pk%}" class="btn btn-primary">Add Cooments</a>
+       <a href="{% url 'blog:add_comment_to_post' pk=my_post.pk%}" class="btn btn-primary">Add Comments</a>
       {# NOTE THAT I HAVE USED COMMENT #}
        {% for comment in  my_post.comments.all%}
          <br>

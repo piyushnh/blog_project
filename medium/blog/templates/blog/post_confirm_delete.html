@@ -1,9 +1,10 @@
 {% extends "blog/base.html" %}
-
-{% block body-block %}
+h2
+{% block body_block %}
   <form  method="post" >
     {% csrf_token %}
-    <h5>Are you sure about deleting ?</h5>
+    {{form.as_p}}
+    <h5>Are you sure about deleting {{post.title}} ?</h5>
     <input type="submit"  value="Delete">
   </form>
 
