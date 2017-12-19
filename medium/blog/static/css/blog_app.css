@@ -1,142 +1,143 @@
 .techfont{
- font-family: 'Russo one',sans-serif;
- font-size: 1.5em;
- text-decoration: underline;
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.5em;
+
 }
 
 #login-page{
- background: #d7f7e1;
+  background-color: #b3efd7;
 }
+
 
 /* NOTE:THIS IS FOR COLORCHANGING */
 .loader {
 
- filter:hue-rotate(0deg);
- background:linear-gradient(45deg,#0f8,#08f);
- animation:hue 10000ms infinite linear;
+  filter:hue-rotate(0deg);
+  color:linear-gradient(45deg,#0f8,#08f);
+  animation:hue 10000ms infinite linear;
 
 }
 
 @keyframes spinify {
- 0% {
-   transform: translate(0px,0px);
+  0% {
+    transform: translate(0px,0px);
 
- }
- 33% {
-   transform: translate(0px,24px);
-   border-radius:100%;
-   width:10px;
-   height:10px;
+  }
+  33% {
+    transform: translate(0px,24px);
+    border-radius:100%;
+    width:10px;
+    height:10px;
 
- }
-  66% {
-   transform:translate(0px,-16px);
- }
+  }
+   66% {
+    transform:translate(0px,-16px);
+  }
 
-  88% {
-   transform:translate(0px,4px);
+   88% {
+    transform:translate(0px,4px);
 
- }
- 100% {
-   transform:translate(0px,0px);
- }
+  }
+  100% {
+    transform:translate(0px,0px);
+  }
 }
 @keyframes hue{
- 0%{filter: hue-rotate(0deg);}
- 100%{filter:hue-rotate(360deg);}
+  0%{filter: hue-rotate(0deg);}
+  100%{filter:hue-rotate(360deg);}
 
 }
 
 /* NOTE THIS IS FOR ABOUT,HTML */
 svg {
- height: 40em;
- left: calc(50% - 50vmin);
- position: relative;
- width: 100vmin;
+  height: 40em;
+  left: calc(50% - 50vmin);
+  position: relative;
+  width: 100vmin;
 }
 
 .ball-top {
- animation: BallTopMove 4s both infinite;
- motion-path: path("m 66.2,39.264578 c 0,0 -5.195345,-18.056477 -20.4,-18.056477 -15.204655,0 -20.4,17.930208 -20.4,17.930208");
- offset-path: path("m 66.2,39.264578 c 0,0 -5.195345,-18.056477 -20.4,-18.056477 -15.204655,0 -20.4,17.930208 -20.4,17.930208");
- motion-offset: 0%;
- offset-distance: 0%;
+  animation: BallTopMove 4s both infinite;
+  motion-path: path("m 66.2,39.264578 c 0,0 -5.195345,-18.056477 -20.4,-18.056477 -15.204655,0 -20.4,17.930208 -20.4,17.930208");
+  offset-path: path("m 66.2,39.264578 c 0,0 -5.195345,-18.056477 -20.4,-18.056477 -15.204655,0 -20.4,17.930208 -20.4,17.930208");
+  motion-offset: 0%;
+  offset-distance: 0%;
 }
 
 .ball-bottom {
- animation: BallBottomMove 4s both infinite;
- motion-path: path("m 66.2,58.979615 c 0,0 -5.195345,18.056477 -20.4,18.056477 -15.204655,0 -20.4,-17.930208 -20.4,-17.930208");
- offset-path: path("m 66.2,58.979615 c 0,0 -5.195345,18.056477 -20.4,18.056477 -15.204655,0 -20.4,-17.930208 -20.4,-17.930208");
- motion-offset: 100%;
- offset-distance: 100%;
+  animation: BallBottomMove 4s both infinite;
+  motion-path: path("m 66.2,58.979615 c 0,0 -5.195345,18.056477 -20.4,18.056477 -15.204655,0 -20.4,-17.930208 -20.4,-17.930208");
+  offset-path: path("m 66.2,58.979615 c 0,0 -5.195345,18.056477 -20.4,18.056477 -15.204655,0 -20.4,-17.930208 -20.4,-17.930208");
+  motion-offset: 100%;
+  offset-distance: 100%;
 }
 
 .thinkMaskCircle {
- animation: ClipSmallMove 4s both infinite;
+  animation: ClipSmallMove 4s both infinite;
 }
 
 .createMaskCircle {
- animation: ClipBigMove 4s both infinite;
+  animation: ClipBigMove 4s both infinite;
 }
 
 @keyframes BallTopMove {
- 0% {
-   motion-offset: 0%;
-   offset-distance: 0%;
-   transform: scale(0);
- }
- 10% { transform: scale(1); }
- 42.5% { transform: scale(1); }
- 50% {
-   motion-offset: 100%;
-   offset-distance: 100%;
-   transform: scale(0);
- }
- 100% {
-   motion-offset: 100%;
-   offset-distance: 100%;
-   transform: scale(0);
- }
+  0% {
+    motion-offset: 0%;
+    offset-distance: 0%;
+    transform: scale(0);
+  }
+  10% { transform: scale(1); }
+  42.5% { transform: scale(1); }
+  50% {
+    motion-offset: 100%;
+    offset-distance: 100%;
+    transform: scale(0);
+  }
+  100% {
+    motion-offset: 100%;
+    offset-distance: 100%;
+    transform: scale(0);
+  }
 }
 
 @keyframes BallBottomMove {
- 0% {
-   motion-offset: 100%;
-   offset-distance: 100%;
-   transform: scale(0);
- }
- 50% {
-   motion-offset: 100%;
-   offset-distance: 100%;
-   transform: scale(0);
- }
- 60% { transform: scale(1); }
- 92.5% { transform: scale(1); }
- 100% {
-   motion-offset: 0%;
-   offset-distance: 0%;
-   transform: scale(0);
- }
+  0% {
+    motion-offset: 100%;
+    offset-distance: 100%;
+    transform: scale(0);
+  }
+  50% {
+    motion-offset: 100%;
+    offset-distance: 100%;
+    transform: scale(0);
+  }
+  60% { transform: scale(1); }
+  92.5% { transform: scale(1); }
+  100% {
+    motion-offset: 0%;
+    offset-distance: 0%;
+    transform: scale(0);
+  }
 }
 
 @keyframes ClipSmallMove {
- 0% { transform: translateY(-63%); }
- 17.5% { transform: translateY(-63%); }
- 50% { transform: translateY(0%); }
- 62.5% { transform: translateY(63%); }
- 100% { transform: translateY(63%); }
+  0% { transform: translateY(-63%); }
+  17.5% { transform: translateY(-63%); }
+  50% { transform: translateY(0%); }
+  62.5% { transform: translateY(63%); }
+  100% { transform: translateY(63%); }
 }
 
 @keyframes ClipBigMove {
- 0% { transform: translateY(0%); }
- 17.5% { transform: translateY(-63%); }
- 50% { transform: translateY(-63%); }
- 62.499% { transform: translateY(-63%); }
- 62.5% { transform: translateY(63%); }
- 100% { transform: translateY(0%); }
+  0% { transform: translateY(0%); }
+  17.5% { transform: translateY(-63%); }
+  50% { transform: translateY(-63%); }
+  62.499% { transform: translateY(-63%); }
+  62.5% { transform: translateY(63%); }
+  100% { transform: translateY(0%); }
 }
 
 .about-head{
- margin:auto
- font-family: 'Montserrat', sans-serif;
+  margin:auto
+  font-family: 'Montserrat', sans-serif;
 }
