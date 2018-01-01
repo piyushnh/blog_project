@@ -41,20 +41,18 @@ class PostUpdateView(LoginRequiredMixin, UpdateView):
 
     model = Post
     form_class = PostForm
+    success_url = reverse_lazy("blog:post_list")
 
 class PostDeleteView( DeleteView):
-    # login_url = '/login/'
-    # redirect_field_name = 'blog/post_detail.html'
-    # context_object_name = "post"
-    model = Post
-    # template_name = "blog/post.html"
-    success_url = reverse_lazy('blog:post_list')
+     login_url = '/login/'
+     redirect_field_name = 'blog/post_detail.html'
+     model = Post
+     success_url = reverse_lazy('blog:post_list')
 
 
 class DraftListView( LoginRequiredMixin,ListView):
     login_url = '/login/'
     redirect_field_name = 'blog/post_list.html'
-    print('Piyush is amazing')
     model = Post
     template_name = 'blog/post_draft_list.html'
     def get_queryset(self):

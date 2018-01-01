@@ -4,6 +4,19 @@
 
 }
 
+.my_listings{
+background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+.btn-comment{
+  right:15em;
+  position:absolute;
+}
+
+.custom{
+  margin:1em;
+}
+
 #login-page{
   background-color: #b3efd7;
 }
